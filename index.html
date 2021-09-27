@@ -19,13 +19,15 @@
 
         var videoSrc = "./" + videoName;
 
-        document.getElementById("videoPlayer").src = videoSrc;
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+        });
     </script>
 
 </head>
 
 <body>
-    <video controls autoplay muted name="media" loop="true">
+    <video controls autoplay muted name="media" loop="true" onLoad='document.getElementById("videoPlayer").src = videoSrc;'>
         <source src="" id="videoPlayer" type="video/mp4">
     </video>
 
