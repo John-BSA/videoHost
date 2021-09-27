@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+
+    <script>
+        var videoName = params.get("video").split("/")[params.get("video").split("/").length - 1];
+
+        var videoSrc = "/" + videoName;
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("videoPlayer").src = videoSrc;
+        });
+    </script>
+
+</head>
+
+<body>
+    <video controls="" autoplay="true" name="media" loop="true">
+        <source src="" id="videoPlayer" type="video/mp4">
+    </video>
+
+</body>
+
+</html>
