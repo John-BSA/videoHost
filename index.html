@@ -4,9 +4,11 @@
     <meta name="viewport" content="width=device-width">
 
     <script>
+        var params = new URLSearchParams(window.location.search);
+
         var videoName = params.get("video").split("/")[params.get("video").split("/").length - 1];
 
-        var videoSrc = "/" + videoName;
+        var videoSrc = "./" + videoName;
 
         document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById("videoPlayer").src = videoSrc;
